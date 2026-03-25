@@ -1,0 +1,51 @@
+# NemoClaw Evidence Workspace
+
+This directory is for **collected evidence artifacts**, not narrative documents.
+
+Use it to store:
+- screenshots
+- command outputs
+- configuration exports
+- sample logs
+- scan results
+- approved tickets / approval records
+- hashed intake records
+- marked sample exports
+- tabletop outputs
+
+## Recommended subfolders
+
+- `architecture/`
+- `identity-access/`
+- `logging-monitoring/`
+- `configuration-hardening/`
+- `media-intake/`
+- `incident-response/`
+- `retention-disposition/`
+- `cryptography/`
+- `physical-personnel/`
+- `session-reconstruction/`
+
+## Suggested naming convention
+
+Use a date plus short description, for example:
+- `2026-03-25-ss-listen-ports.txt`
+- `2026-03-25-ufw-rules.txt`
+- `2026-03-25-mfa-login-screenshot.png`
+- `2026-03-25-model-intake-hash-manifest.pdf`
+
+## Rules
+
+1. Treat collected evidence as potentially sensitive.
+2. Assume many artifacts will contain CUI or derived CUI unless reviewed otherwise.
+3. Do not drop raw evidence into random locations in the repo.
+4. Prefer stable filenames and keep the evidence binder index updated.
+5. If an artifact is too sensitive for git, note its location in the evidence binder index instead of committing it here.
+
+## Important note
+
+This repo can track metadata and selected sanitized evidence, but that does **not** mean all production evidence should automatically be committed to GitHub.
+
+For especially sensitive runtime evidence, the better pattern is often:
+- store the real artifact in an approved internal evidence repository
+- reference its location, owner, and collection date in the binder index

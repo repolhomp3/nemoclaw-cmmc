@@ -51,14 +51,17 @@ If you are reviewing the package for the first time:
 2. `docs/ssp/nemoclaw-dgx-spark-ssp-draft.md`
 3. `docs/assessment/nemoclaw-dgx-spark-control-matrix.md`
 4. `docs/assessment/nemoclaw-dgx-spark-auditor-checklist.md`
-5. `docs/standards/nemoclaw-dgx-spark-derived-cui-handling-standard.md`
-6. `docs/standards/nemoclaw-dgx-spark-logging-and-review-standard.md`
-7. `docs/standards/nemoclaw-dgx-spark-retention-and-data-disposition-matrix.md`
-8. `docs/standards/nemoclaw-dgx-spark-cryptographic-implementation-statement.md`
-9. `docs/procedures/nemoclaw-dgx-spark-media-model-image-intake-sop.md`
-10. `docs/procedures/nemoclaw-dgx-spark-incident-response-playbook-addendum.md`
-11. `docs/risk/nemoclaw-dgx-spark-ai-risk-addendum.md`
-12. `docs/assessment/nemoclaw-dgx-spark-evidence-binder-index.md`
+5. `docs/assessment/nemoclaw-dgx-spark-poam.md`
+6. `docs/standards/nemoclaw-dgx-spark-derived-cui-handling-standard.md`
+7. `docs/standards/nemoclaw-dgx-spark-logging-and-review-standard.md`
+8. `docs/standards/nemoclaw-dgx-spark-retention-and-data-disposition-matrix.md`
+9. `docs/standards/nemoclaw-dgx-spark-cryptographic-implementation-statement.md`
+10. `docs/procedures/nemoclaw-dgx-spark-media-model-image-intake-sop.md`
+11. `docs/procedures/nemoclaw-dgx-spark-incident-response-playbook-addendum.md`
+12. `docs/risk/nemoclaw-dgx-spark-ai-risk-addendum.md`
+13. `docs/assessment/nemoclaw-dgx-spark-evidence-binder-index.md`
+14. `docs/evidence/README.md`
+15. `docs/evidence/collection-tracker.md`
 
 ## What still needs to be added or finalized
 
@@ -80,4 +83,6 @@ They are intended to help:
 - structure assessment preparation
 - identify missing evidence
 - accelerate SSP and control-response development
+- prepare for internal review, C3PAO review, or remediation planning
+celerate SSP and control-response development
 - prepare for internal review, C3PAO review, or remediation planning
