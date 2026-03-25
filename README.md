@@ -53,6 +53,8 @@ The document set is being built around a practical sequence:
   - guidance for storing evidence artifacts safely and sanely
 - `docs/evidence/collection-tracker.md`
   - working tracker for evidence collection status, owners, and storage locations
+- `docs/evidence/dgx-operator-handoff-note.md`
+  - one-page handoff note for the person executing the first-pass evidence capture on the DGX
 - `docs/evidence/dgx-first-pass-execution-checklist.md`
   - first-pass field checklist for collecting the initial DGX runtime evidence across POAM-001, POAM-012, and POAM-014
 - `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
@@ -84,8 +86,11 @@ If you are reviewing the package for the first time:
 14. `docs/assessment/nemoclaw-dgx-spark-evidence-binder-index.md`
 15. `docs/evidence/README.md`
 16. `docs/evidence/collection-tracker.md`
-17. `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
-18. `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
+17. `docs/evidence/dgx-operator-handoff-note.md`
+18. `docs/evidence/dgx-first-pass-execution-checklist.md`
+19. `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
+20. `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
+21. `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
 
 ## What still needs to be added or finalized
 
