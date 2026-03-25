@@ -590,13 +590,16 @@ NemoClaw introduces system characteristics not present in traditional applicatio
 The AI agent reads CUI source code under constrained sandbox policy. Agent access is limited to approved directories and approved tool actions. These reads are attributable to authenticated user sessions and logged.
 
 ### 21.2 Derived CUI
-Outputs, embeddings, summaries, and logs generated from CUI are treated as CUI unless explicitly sanitized.
+Outputs, embeddings, summaries, and logs generated from CUI are treated as CUI unless explicitly sanitized. Detailed handling, storage, export, sanitization, and release rules are defined in `docs/standards/nemoclaw-dgx-spark-derived-cui-handling-standard.md`.
 
 ### 21.3 Prompt injection
-The organization treats malicious code comments, source artifacts, or user prompts intended to manipulate model behavior as a threat scenario. Mitigations include sandboxing, least privilege, audit logging, user training, and incident procedures.
+The organization treats malicious code comments, source artifacts, or user prompts intended to manipulate model behavior as a threat scenario. Mitigations include sandboxing, least privilege, audit logging, user training, and incident procedures. The risk framing for this scenario is expanded in `docs/risk/nemoclaw-dgx-spark-ai-risk-addendum.md`.
 
 ### 21.4 Model provenance
 Base model weights are public and not automatically treated as CUI. However, model hosting, prompts, outputs, and any future fine-tuned weights derived from CUI remain in scope. If fine-tuning on CUI is introduced, this SSP must be updated.
+
+### 21.5 Cryptographic protections
+The system’s draft cryptographic control position for in-transit and at-rest protection is documented in `docs/standards/nemoclaw-dgx-spark-cryptographic-implementation-statement.md`. Final approval of that statement requires host-specific evidence and an approved basis for any claim under **SC.L2-3.13.11**.
 
 ---
 
@@ -634,17 +637,34 @@ The following evidence supports this SSP and shall be maintained:
 - retention/destruction procedures
 - incident response playbook addendum
 - training records for local users/admins
+- approved copies of the companion documents referenced in this SSP
+- evidence mapped in `docs/assessment/nemoclaw-dgx-spark-evidence-binder-index.md`
+
+The following repository documents currently serve as the primary supporting artifacts for this draft:
+- `docs/assessment/nemoclaw-dgx-spark-gap-assessment.md`
+- `docs/assessment/nemoclaw-dgx-spark-control-matrix.md`
+- `docs/assessment/nemoclaw-dgx-spark-auditor-checklist.md`
+- `docs/assessment/nemoclaw-dgx-spark-evidence-binder-index.md`
+- `docs/standards/nemoclaw-dgx-spark-derived-cui-handling-standard.md`
+- `docs/standards/nemoclaw-dgx-spark-logging-and-review-standard.md`
+- `docs/standards/nemoclaw-dgx-spark-retention-and-data-disposition-matrix.md`
+- `docs/standards/nemoclaw-dgx-spark-cryptographic-implementation-statement.md`
+- `docs/procedures/nemoclaw-dgx-spark-media-model-image-intake-sop.md`
+- `docs/procedures/nemoclaw-dgx-spark-incident-response-playbook-addendum.md`
+- `docs/risk/nemoclaw-dgx-spark-ai-risk-addendum.md`
 
 ---
 
 ## 24. Open Items / Completion Notes
 
 The following items should be finalized before assessment:
-1. Exact retention periods for logs, conversation history, embeddings, and exports  
-2. Approved cryptographic module/boundary statement for **SC.L2-3.13.11**  
+1. Approval of exact retention periods for logs, conversation history, embeddings, exports, backups, and intake artifacts  
+2. Approved cryptographic module/boundary statement with host-specific evidence for **SC.L2-3.13.11**  
 3. Session timeout and reauthentication settings  
 4. Export/download/copy/print restrictions in the UI  
 5. Time synchronization source for **AU.L2-3.3.7**  
 6. Backup scope, storage location, and encryption method  
-7. Detailed media intake SOP for images/models/packages  
-8. Physical custody procedure for the DGX Spark device
+7. Physical custody procedure for the DGX Spark device  
+8. Approval and exercise of the incident response playbook addendum specific to AI misuse, prompt injection, and extraction scenarios  
+9. Formal approval/signature workflow for the companion standards and procedures  
+10. Collection of runtime evidence mapped in the evidence binder index
