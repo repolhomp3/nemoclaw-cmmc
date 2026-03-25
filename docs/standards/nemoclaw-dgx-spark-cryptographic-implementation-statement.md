@@ -117,6 +117,8 @@ The following draft decisions are recommended unless enterprise policy dictates 
 
 A final version of this statement should not be approved until the following evidence is assembled from the deployed DGX Spark environment.
 
+The evidence-collection workflow for this draft is organized in `docs/evidence/poam-001-crypto-host-evidence-checklist.md`.
+
 ### 7.1 Host and package evidence
 - exact OS release and patch level
 - exact versions of nginx, OpenSSH, relevant TLS libraries, and disk-encryption components

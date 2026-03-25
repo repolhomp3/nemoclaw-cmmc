@@ -53,6 +53,8 @@ The document set is being built around a practical sequence:
   - guidance for storing evidence artifacts safely and sanely
 - `docs/evidence/collection-tracker.md`
   - working tracker for evidence collection status, owners, and storage locations
+- `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
+  - host-evidence checklist and decision worksheet for closing the cryptographic implementation gap
 - `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
   - runbook for collecting no-egress and localhost-only runtime proof on the target host
 - `docs/evidence/scripts/poam-012-no-egress-and-localhost-proof.sh`
