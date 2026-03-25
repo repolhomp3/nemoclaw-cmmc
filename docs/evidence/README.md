@@ -26,6 +26,13 @@ Use it to store:
 - `physical-personnel/`
 - `session-reconstruction/`
 
+## Active runbooks
+
+- `poam-012-no-egress-and-localhost-proof-runbook.md`
+- `poam-014-end-to-end-session-reconstruction-runbook.md`
+
+These are the first two evidence-capture runbooks to execute on the actual DGX Spark host.
+
 ## Suggested naming convention
 
 Use a date plus short description, for example:
