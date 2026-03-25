@@ -28,12 +28,13 @@ Use it to store:
 
 ## Active runbooks and helpers
 
+- `dgx-first-pass-execution-checklist.md`
 - `poam-001-crypto-host-evidence-checklist.md`
 - `poam-012-no-egress-and-localhost-proof-runbook.md`
 - `scripts/poam-012-no-egress-and-localhost-proof.sh`
 - `poam-014-end-to-end-session-reconstruction-runbook.md`
 
-These are the first evidence-capture runbooks and checklists to execute on the actual DGX Spark host. The POAM-012 script is a read-only helper to collect the baseline command outputs on the target machine.
+These are the first evidence-capture runbooks and checklists to execute on the actual DGX Spark host. The DGX first-pass checklist ties the three active evidence tracks together, and the POAM-012 script is a read-only helper to collect the baseline command outputs on the target machine.
 
 ## Suggested naming convention
 

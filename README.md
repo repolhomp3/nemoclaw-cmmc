@@ -53,6 +53,8 @@ The document set is being built around a practical sequence:
   - guidance for storing evidence artifacts safely and sanely
 - `docs/evidence/collection-tracker.md`
   - working tracker for evidence collection status, owners, and storage locations
+- `docs/evidence/dgx-first-pass-execution-checklist.md`
+  - first-pass field checklist for collecting the initial DGX runtime evidence across POAM-001, POAM-012, and POAM-014
 - `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
   - host-evidence checklist and decision worksheet for closing the cryptographic implementation gap
 - `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
