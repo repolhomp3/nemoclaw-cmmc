@@ -6,10 +6,23 @@
 **System Owner:** [Name / Role]  
 **Authorizing Official:** [Name / Role]  
 **System Location:** [Facility / Room / Enclave]  
-**Version:** Draft v0.1  
+**Version:** Draft v0.2  
 **Date:** [Insert Date]  
 **Security Baseline:** CMMC Level 2 / NIST SP 800-171 Rev. 2  
 **Assessment Context:** New in-scope asset entering an existing CMMC Level 2 enclave
+
+---
+
+## Related Documents
+
+This SSP is supported by the following companion documents in this repository:
+- `docs/assessment/nemoclaw-dgx-spark-gap-assessment.md`
+- `docs/standards/nemoclaw-dgx-spark-derived-cui-handling-standard.md`
+- `docs/standards/nemoclaw-dgx-spark-logging-and-review-standard.md`
+- `docs/procedures/nemoclaw-dgx-spark-media-model-image-intake-sop.md`
+- `docs/risk/nemoclaw-dgx-spark-ai-risk-addendum.md`
+
+These companion documents provide system-specific detail for derived CUI handling, logging and review, supply-chain/media intake, and AI-specific risk scenarios referenced throughout this SSP.
 
 ---
 
