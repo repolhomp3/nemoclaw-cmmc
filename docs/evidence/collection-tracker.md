@@ -25,6 +25,10 @@ Use this tracker with `docs/assessment/nemoclaw-dgx-spark-evidence-binder-index.
 | Session timeout / reauth evidence | Not Started | [TBD] |  |  |  |
 | Sample user-session reconstruction | Not Started | [TBD] |  |  |  |
 | OpenShell policy evidence | Not Started | [TBD] |  |  |  |
+| Docker daemon configuration capture | Not Started | [TBD] |  |  |  |
+| Docker administrative access review | Not Started | [TBD] |  |  |  |
+| Docker runtime inventory package | Not Started | [TBD] |  |  |  |
+| Approved container image inventory by digest | Not Started | [TBD] |  |  |  |
 | STIG/SCAP results | Not Started | [TBD] |  |  |  |
 | Container / dependency scan evidence | Not Started | [TBD] |  |  |  |
 | Intake request + hash + scan package | Not Started | [TBD] |  |  |  |
