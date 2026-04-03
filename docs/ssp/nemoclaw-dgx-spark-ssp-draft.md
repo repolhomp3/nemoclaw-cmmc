@@ -69,6 +69,7 @@ The following are within the system boundary because they process, store, transm
 - DGX Spark host operating system
 - Local encrypted storage
 - Docker and NVIDIA Container Toolkit
+  - Docker remains the runtime of record for the assessed build and is treated as an explicit in-scope control surface requiring baseline, access restriction, image governance, and runtime proof.
 - NemoClaw orchestration components
 - OpenClaw agent loop framework
 - OpenShell sandbox policy and enforcement

@@ -5,6 +5,7 @@
 **Primary POA&M items covered:**
 - **POAM-001** — cryptographic host evidence
 - **POAM-012** — no-egress and localhost-only service proof
+- **POAM-020** — Docker runtime proof package
 - **POAM-014** — end-to-end session reconstruction
 
 ---
@@ -34,6 +35,7 @@ At the end of this first pass, the team should have:
 - host/network baseline outputs
 - initial no-egress / localhost-binding evidence
 - first-pass crypto evidence captures
+- first-pass Docker runtime evidence captures
 - one planned path for a controlled end-to-end session reconstruction
 - updated evidence tracker and binder entries
 - POA&M items that can move from generic “In Progress” to evidence-backed follow-up work
@@ -66,6 +68,7 @@ Before collecting anything:
   - `docs/evidence/collection-tracker.md`
   - `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
   - `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
+  - `docs/evidence/poam-020-docker-runtime-evidence-runbook.md`
   - `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
 
 ---
@@ -172,9 +175,53 @@ Update:
 
 ---
 
-## Step 4 - Plan and execute one controlled POAM-014 session
+## Step 4 - Collect POAM-020 Docker runtime evidence
 
-Do this after the host baseline and crypto captures, so the team already understands the environment and log sources.
+Do this after the network/bind and crypto baseline so the team can correlate Docker exposure with the host posture already captured.
+
+### Primary document
+- `docs/evidence/poam-020-docker-runtime-evidence-runbook.md`
+
+### Focus areas for first pass
+- Docker daemon version and configuration
+- Docker administrative access and socket permissions
+- running container inventory
+- image digests
+- published ports and host listen correlation
+- mounts/volumes and effective privilege posture
+
+### First-pass evidence captures to prioritize
+```bash
+docker version
+sudo docker info
+sudo docker ps -a --no-trunc
+sudo docker images --digests --no-trunc
+sudo docker network ls
+sudo docker volume ls
+sudo sh -c 'test -f /etc/docker/daemon.json && cat /etc/docker/daemon.json'
+getent group docker
+ls -l /var/run/docker.sock
+```
+
+### First-pass success criteria
+- [ ] Docker daemon config captured
+- [ ] Docker-admin-capable access captured
+- [ ] running containers and image digests captured
+- [ ] published ports can be correlated to host listening services
+- [ ] bind mounts and effective privilege posture are visible enough to identify follow-up questions
+- [ ] any privileged containers, risky mounts, or unexpected non-loopback exposure flagged immediately
+
+### Immediate follow-up
+Update:
+- approved image inventory template
+- evidence tracker
+- binder entries for Docker config, Docker admin access, runtime inventory, and image evidence
+
+---
+
+## Step 5 - Plan and execute one controlled POAM-014 session
+
+Do this after the host baseline, crypto captures, and Docker runtime evidence, so the team already understands the environment and log sources.
 
 ### Primary documents
 - `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
@@ -212,7 +259,7 @@ Update:
 
 ---
 
-## Step 5 - Review findings before changing anything
+## Step 6 - Review findings before changing anything
 
 After the first pass, stop and review before making config changes.
 
@@ -231,11 +278,12 @@ This prevents evidence collection from quietly turning into unsanctioned hardeni
 
 At the end of the run, produce:
 
-1. **Captured output folder(s)** for POAM-012 and POAM-001  
-2. **One session reconstruction evidence pack** for POAM-014  
-3. **Updated `docs/evidence/collection-tracker.md`**  
-4. **Updated binder index references**  
-5. **Short findings summary** listing:
+1. **Captured output folder(s)** for POAM-012, POAM-001, and POAM-020  
+2. **One updated approved image inventory template** tied to the assessed runtime  
+3. **One session reconstruction evidence pack** for POAM-014  
+4. **Updated `docs/evidence/collection-tracker.md`**  
+5. **Updated binder index references**  
+6. **Short findings summary** listing:
    - confirmed controls
    - unclear areas
    - likely blockers

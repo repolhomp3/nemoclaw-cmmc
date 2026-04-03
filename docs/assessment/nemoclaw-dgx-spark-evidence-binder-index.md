@@ -101,6 +101,10 @@ This file is an index, not the evidence repository itself.
 |---|---|---|---|
 | Production baseline package list | System Administrator | CM.L2-3.4.1, CM.L2-3.4.6 | Needed |
 | Approved configuration baseline | Security / Operations | CM.L2-3.4.2 | Needed |
+| Docker daemon configuration capture | System Administrator | CM family, SC family, POAM-019/020 | Needed |
+| Docker administrative access review | System Administrator / Security | AC family, CM family, POAM-019 | Needed |
+| Docker runtime inventory package | System Administrator / Assessment Lead | CM family, SC family, SI family, POAM-020 | Needed |
+| Approved container image inventory by digest | Operations / Security | CM.L2-3.4.1, SI.L2-3.14.1, POAM-021 | Needed |
 | OpenShell policy files and approval history | App Owner / Security | AC, CM, SC | Needed |
 | AppArmor profile evidence | System Administrator | CM, SC | Needed |
 | UFW rules and verification tests | System Administrator | CM, SC | Needed |
@@ -136,6 +140,7 @@ This file is an index, not the evidence repository itself.
 | Media ID and custody record | Operations | MP.L2-3.8.5, MP.L2-3.8.6 | Needed |
 | Import-side verification record | Import Administrator | SI, CM | Needed |
 | Artifact digest/version inventory | Operations / App Owner | CM.L2-3.4.1, SI.L2-3.14.1 | Needed |
+| Approved-to-runtime image comparison sheet | Operations / Assessment Lead | CM family, assessor readiness, POAM-020/021 | Needed |
 
 ---
 

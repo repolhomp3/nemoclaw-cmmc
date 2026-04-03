@@ -33,9 +33,10 @@ Use it to store:
 - `poam-001-crypto-host-evidence-checklist.md`
 - `poam-012-no-egress-and-localhost-proof-runbook.md`
 - `scripts/poam-012-no-egress-and-localhost-proof.sh`
+- `poam-020-docker-runtime-evidence-runbook.md`
 - `poam-014-end-to-end-session-reconstruction-runbook.md`
 
-These are the first evidence-capture runbooks and checklists to execute on the actual DGX Spark host. The operator handoff note is the fastest starting point for the person doing the work, the DGX first-pass checklist ties the three active evidence tracks together, and the POAM-012 script is a read-only helper to collect the baseline command outputs on the target machine.
+These are the first evidence-capture runbooks and checklists to execute on the actual DGX Spark host. The operator handoff note is the fastest starting point for the person doing the work, the DGX first-pass checklist ties the active evidence tracks together, the POAM-012 script is a read-only helper to collect the baseline command outputs on the target machine, and the POAM-020 runbook adds the Docker-specific runtime proof package needed to show actual daemon, container, image, port, mount, and privilege posture on the assessed build.
 
 ## Suggested naming convention
 

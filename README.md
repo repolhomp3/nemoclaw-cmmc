@@ -116,6 +116,9 @@ Evidence collection index showing what artifacts should exist, who owns them, an
 ### `docs/assessment/nemoclaw-dgx-spark-poam.md`
 POA&M translating the open issues into tracked remediation and evidence-collection work.
 
+### `docs/assessment/nemoclaw-dgx-spark-docker-runtime-position.md`
+Position note explaining why the readiness path should keep NemoClaw as designed, retain Docker as the runtime of record, and manage Docker explicitly through hardening, evidence, and POA&M closure instead of forcing a late Podman pivot.
+
 ---
 
 ## 4.2 SSP
@@ -145,8 +148,14 @@ Defines proposed retention, purge, and disposition rules for source data, derive
 ### `docs/standards/nemoclaw-dgx-spark-cryptographic-implementation-statement.md`
 Draft cryptographic protection statement and validation worksheet for in-transit and at-rest protection, especially SC.L2-3.13.11.
 
+### `docs/standards/nemoclaw-dgx-spark-docker-hardening-standard.md`
+Docker hardening profile for the assessed build covering daemon settings, administrative access, image control, runtime least privilege, ports, mounts, and exception handling.
+
 ### `docs/procedures/nemoclaw-dgx-spark-media-model-image-intake-sop.md`
 Procedure for controlled import of models, images, packages, updates, and related artifacts into the enclave.
+
+### `docs/procedures/nemoclaw-dgx-spark-approved-container-image-inventory-template.md`
+Template for maintaining the approved Docker image set by digest and tying each image to intake, scanning, approval, and baseline references.
 
 ### `docs/procedures/nemoclaw-dgx-spark-incident-response-playbook-addendum.md`
 System-specific IR addendum covering AI misuse, prompt injection, over-disclosure, logging failures, and intake incidents.
@@ -182,6 +191,9 @@ Read-only helper script for POAM-012 evidence collection.
 ### `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
 Runbook for collecting one end-to-end session reconstruction evidence package.
 
+### `docs/evidence/poam-020-docker-runtime-evidence-runbook.md`
+Runbook for collecting Docker runtime evidence from the assessed DGX Spark build, including daemon config, admin access, running containers, image digests, published ports, mounts, and effective privilege posture.
+
 ### Evidence subfolders
 These are scaffolds for evidence storage and organization:
 - `docs/evidence/architecture/`
@@ -214,14 +226,17 @@ If you are new to the repo, read in this order:
 11. `docs/procedures/nemoclaw-dgx-spark-media-model-image-intake-sop.md`
 12. `docs/procedures/nemoclaw-dgx-spark-incident-response-playbook-addendum.md`
 13. `docs/risk/nemoclaw-dgx-spark-ai-risk-addendum.md`
-14. `docs/evidence/README.md`
-15. `docs/evidence/collection-tracker.md`
-16. `docs/evidence/dgx-operator-handoff-note.md`
-17. `docs/evidence/dgx-first-pass-execution-checklist.md`
-18. `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
-19. `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
-20. `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
-21. `docs/assessment/nemoclaw-dgx-spark-session-reconstruction-assessor-walkthrough.md`
+14. `docs/standards/nemoclaw-dgx-spark-docker-hardening-standard.md`
+15. `docs/procedures/nemoclaw-dgx-spark-approved-container-image-inventory-template.md`
+16. `docs/evidence/README.md`
+17. `docs/evidence/collection-tracker.md`
+18. `docs/evidence/dgx-operator-handoff-note.md`
+19. `docs/evidence/dgx-first-pass-execution-checklist.md`
+20. `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
+21. `docs/evidence/poam-012-no-egress-and-localhost-proof-runbook.md`
+22. `docs/evidence/poam-020-docker-runtime-evidence-runbook.md`
+23. `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
+24. `docs/assessment/nemoclaw-dgx-spark-session-reconstruction-assessor-walkthrough.md`
 
 ---
 
@@ -233,13 +248,15 @@ If you are the person actually collecting runtime evidence on the DGX Spark, sta
 2. `docs/evidence/dgx-first-pass-execution-checklist.md`
 3. `docs/evidence/scripts/poam-012-no-egress-and-localhost-proof.sh`
 4. `docs/evidence/poam-001-crypto-host-evidence-checklist.md`
-5. `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
-6. `docs/evidence/collection-tracker.md`
+5. `docs/evidence/poam-020-docker-runtime-evidence-runbook.md`
+6. `docs/evidence/poam-014-end-to-end-session-reconstruction-runbook.md`
+7. `docs/evidence/collection-tracker.md`
 
 ### The first-pass execution goal
 Collect enough real evidence from the actual DGX Spark to meaningfully advance:
 - **POAM-001** — crypto host evidence
 - **POAM-012** — no-egress / localhost-only proof
+- **POAM-020** — Docker runtime proof package
 - **POAM-014** — end-to-end session reconstruction
 
 ### Important warning

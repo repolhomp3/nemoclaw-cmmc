@@ -181,6 +181,31 @@ If these assumptions change, the risk assessment must be updated.
 
 ---
 
+## 4.7 Docker administrative boundary and runtime exposure risk
+**Scenario:** Docker remains part of the assessed runtime as designed, but daemon configuration, administrative access, published ports, or container privilege settings are broader than intended.
+
+**Potential impact:**
+- unauthorized administrative control over containers
+- weakened host/container isolation assumptions
+- accidental exposure of internal services beyond localhost/LAN intent
+- incomplete understanding of what the assessed build is actually running
+
+**Primary mitigations:**
+- treat Docker administrative access as privileged access
+- tightly restrict Docker-capable users/groups
+- baseline and review daemon configuration
+- inventory production images by digest
+- validate published ports, binds, and effective runtime posture on the actual DGX Spark
+- include Docker runtime proof in the evidence binder and POA&M closure criteria
+
+**Related practices:**
+- **AC.L2-3.1.5**
+- **AC.L2-3.1.6**
+- **CM.L2-3.4.1**
+- **CM.L2-3.4.6**
+- **SC.L2-3.13.1**
+- **SI.L2-3.14.6**
+
 ## 5. Risk Treatment Expectations
 
 The following controls are expected as minimum treatment for AI-specific risk:
